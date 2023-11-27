@@ -2,8 +2,8 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "bin": {
-  "brain-games": "bin/brain-games.js"
-},
+    "brain-games": "bin/brain-games.js"
+  },
   "description": "[![Actions Status](https://github.com/Wa11en/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Wa11en/frontend-project-44/actions)",
   "main": "index.js",
   "scripts": {
@@ -11,5 +11,8 @@
     "type": "module"
   },
   "author": "Valentin",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
 }
