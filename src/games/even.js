@@ -4,11 +4,10 @@ const isEven = (num) => num % 2 === 0;
 
 const playBrainEven = () => {
   const countToWin = 3;
-  let correctAnswerCount = 0;
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
-  while (correctAnswerCount < countToWin) {
+  for (let correctAnswerCount = 0; correctAnswerCount < countToWin;) {
     const randomNumber = Math.floor(Math.random() * 100 + 1);
     const correctAnswer = isEven(randomNumber) ? 'yes' : 'no';
     console.log(`Question: ${randomNumber}`);
