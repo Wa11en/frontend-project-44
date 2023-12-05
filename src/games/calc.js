@@ -1,3 +1,6 @@
+import { playGame } from '../index.js';
+
+const gameGreet = 'What is the result of the expression?';
 const calculateExpression = (number1, operator, number2) => {
   switch (operator) {
     case '+':
@@ -23,6 +26,7 @@ const generateGame = () => {
   return {
     question,
     correctAnswer,
+    gameGreet,
   };
 };
 
