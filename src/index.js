@@ -8,7 +8,7 @@ export const greetUser = () => {
 };
 
 export const playRound = (question, correctAnswer, userName) => {
-  console.log(`Question: ${question}`);
+  console.log(question);
   const userAnswer = readlineSync.question('Your answer: ');
 
   if (userAnswer === correctAnswer) {
@@ -29,7 +29,7 @@ export const playGame = (generateGame, gameGreet) => {
   while (correctAnswersCount < 3) {
     const { question, correctAnswer } = generateGame();
 
-    if (playRound(question, correctAnswer, userName)) {
+    if (playRound(question, correctAnswer, userName, correctAnswersCount === 0)) {
       correctAnswersCount += 1;
     } else {
       return;
