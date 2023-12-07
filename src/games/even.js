@@ -3,6 +3,7 @@ import readlineSync from 'readline-sync';
 const isEven = (num) => num % 2 === 0;
 
 const playBrainEven = () => {
+  console.log('Welcome to the Brain Games!');
   const countToWin = 3;
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
