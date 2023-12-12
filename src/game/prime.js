@@ -1,3 +1,5 @@
+import { playGame } from '../index.js';
+
 const isPrime = (num) => {
   if (num < 2) {
     return false;
@@ -9,15 +11,16 @@ const isPrime = (num) => {
   }
   return true;
 };
+const gameGreet = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const generateGame = () => {
+const startBrainPrime = () => {
   const questionNumber = Math.floor(Math.random() * 100) + 1;
   const correctAnswer = isPrime(questionNumber) ? 'yes' : 'no';
 
   return {
+    gameGreet,
     question: `Question: ${questionNumber}`,
     correctAnswer,
   };
 };
-
-export default generateGame;
+export default () => playGame(startBrainPrime, gameGreet);

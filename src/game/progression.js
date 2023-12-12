@@ -1,4 +1,8 @@
-const generateProgression = () => {
+import { playGame } from '../index.js';
+
+const gameGreet = 'What number is missing in the progression?';
+
+const startBrainProgression = () => {
   const progressionLength = Math.floor(Math.random() * 6) + 5;
   const start = Math.floor(Math.random() * 20);
   const step = Math.floor(Math.random() * 5) + 1;
@@ -17,4 +21,4 @@ const generateProgression = () => {
   };
 };
 
-export default generateProgression;
+export default () => playGame(startBrainProgression, gameGreet);

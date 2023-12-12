@@ -10,7 +10,7 @@
     "brain-progression": "bin/brain-progression.js",
     "brain-prime": "bin/brain-prime.js"
   },
-  "description": "[![Actions Status](https://github.com/Wa11en/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Wa11en/frontend-project-44/actions)",
+  "description": "Brain Games - a set of five console-based mind-training games.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

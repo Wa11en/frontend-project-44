@@ -9,7 +9,7 @@ export const greetUser = () => {
 
 export const playRound = (question, correctAnswer, userName) => {
   console.log(question);
-  const userAnswer = readlineSync.question('Your answer: ');
+  const userAnswer = readlineSync.question('Your answer: ').toLowerCase();
 
   if (userAnswer === correctAnswer) {
     console.log('Correct!');
