@@ -1,4 +1,5 @@
-import { playGame } from '../index.js';
+import playGame from '../index.js';
+import { generateProgression } from '../utils.js';
 
 const gameGreet = 'What number is missing in the progression?';
 
@@ -8,16 +9,14 @@ const startBrainProgression = () => {
   const step = Math.floor(Math.random() * 5) + 1;
   const hiddenElement = Math.floor(Math.random() * progressionLength);
 
-  const progression = [];
+  const progression = generateProgression(start, step, progressionLength);
 
-  for (let i = 0; i < progressionLength; i += 1) {
-    const currentNumber = start + step * i;
-    progression.push(i === hiddenElement ? '..' : currentNumber);
-  }
+  const correctAnswer = progression[hiddenElement].toString();
+  progression[hiddenElement] = '..';
 
   return {
     question: `Question: ${progression.join(' ')}`,
-    correctAnswer: (start + step * hiddenElement).toString(),
+    correctAnswer,
   };
 };
 

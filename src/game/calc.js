@@ -1,5 +1,5 @@
-import { playGame } from '../index.js';
-import getRandomNumber from '../utils.js';
+import playGame from '../index.js';
+import { getRandomNumber } from '../utils.js';
 
 const calculateExpression = (number1, operator, number2) => {
   switch (operator) {
@@ -28,7 +28,6 @@ const startBrainCalc = () => {
   return {
     question,
     correctAnswer,
-    gameGreet,
   };
 };
 

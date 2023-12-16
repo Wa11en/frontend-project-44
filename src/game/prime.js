@@ -1,4 +1,4 @@
-import { playGame } from '../index.js';
+import playGame from '../index.js';
 
 const isPrime = (num) => {
   if (num < 2) {

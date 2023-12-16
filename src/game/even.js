@@ -1,4 +1,4 @@
-import { playGame } from '../index.js';
+import playGame from '../index.js';
 
 const isEven = (num) => num % 2 === 0;
 
