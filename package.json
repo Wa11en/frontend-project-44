@@ -18,7 +18,6 @@
   "author": "Valentin",
   "license": "ISC",
   "dependencies": {
-    "latest": "^0.2.0",
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {

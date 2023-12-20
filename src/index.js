@@ -6,9 +6,9 @@ export default (generateGame, gameGreet) => {
   console.log(`Hello, ${userName}!`);
   console.log(gameGreet);
 
-  let correctAnswersCount = 0;
+  const roundsCount = 3;
 
-  while (correctAnswersCount < 3) {
+  for (let round = 1; round <= roundsCount; round += 1) {
     const { question, correctAnswer } = generateGame();
 
     console.log(question);
@@ -16,7 +16,6 @@ export default (generateGame, gameGreet) => {
 
     if (userAnswer === correctAnswer) {
       console.log('Correct!');
-      correctAnswersCount += 1;
     } else {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
       console.log(`Let's try again, ${userName}!`);

@@ -16,10 +16,11 @@ const gameGreet = 'Answer "yes" if given number is prime. Otherwise answer "no".
 const startBrainPrime = () => {
   const questionNumber = Math.floor(Math.random() * 100) + 1;
   const correctAnswer = isPrime(questionNumber) ? 'yes' : 'no';
+  const question = `Question: ${questionNumber}`;
 
   return {
     gameGreet,
-    question: `Question: ${questionNumber}`,
+    question,
     correctAnswer,
   };
 };
